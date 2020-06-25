@@ -18,4 +18,8 @@ class Person
     @pant_length = pant_length
     @pant_width = pant_width
   end
+  
+  def initialize(attributes)
+    attributes.each {|key, value| self.send(("#{key}="), value)}
+  end
 end
